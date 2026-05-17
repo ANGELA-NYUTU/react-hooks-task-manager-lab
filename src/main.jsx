@@ -3,8 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './components/App.jsx'
 import { TaskProvider } from './context/TaskContext.jsx'
+//Update App within main.jsx to be wrapped in TaskProvider.
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <TaskProvider>
       <App />
+    </TaskProvider>
   </StrictMode>,
 )
